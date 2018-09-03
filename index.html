@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/desafio.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio Oncoclínicas </title>
+</head>
+<body style="background-color: #E0E0E0;" onLoad="inicia_pagina();">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 20px;">
+    <span class="navbar-brand" href="#">Desafio Oncoclínicas </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <div class="collapse navbar-collapse" id="navbarColor01">
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+     </ul>
+   </div>
+</nav>
+  
+<div class="container col-sm-10 col-md-10 col-xs-11"> 
+  	<legend>Cadastrar Novo Produto</legend>
+  
+	<form id="formCadastro">
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="inputCodProduto">Código do Produto</label>
+				<input type="cod_produto" class="form-control" value="" id="CodProduto" readonly>
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputNomeProduto">Nome do Produto</label>
+				<input type="nome_produto" class="form-control" id="NomeProduto" placeholder="Nome do Produto" maxlength="40" required>
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputDataCadastro">Data do Cadastro</label>
+				<input type="text" class="form-control" id="DataCadastro" name="DataCadastro" value="" readonly>
+			</div>
+		</div>
+		
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="inpuVlFabricacao">Valor de Fabricação</label>
+				<input type="text" class="form-control" id="VlFabricacao" name="VlFabricacao" placeholder="R$ X.XXX,XX" style="display:inline-block" required="required" onChange="calc_preco();">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputPorcentagem">Porcentagem de Lucro</label>
+				<input type="number" class="form-control" id="Porcentagem" placeholder="XX%" required="required" onChange="calc_preco();">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="inputVlProduto">Valor do Produto</label>
+				<input type="text" class="form-control" id="VlProduto" name="VlProduto"  value="" readonly>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-12">
+				<div class="row">
+					<div class="col-md-8" id="mensagem"></div>
+					<div class="col-md-4">
+						<button type="button" class="btn btn-dark btn-right" id="salvar" name="salvar" >Cadastrar</button>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</form>  
+	  
+</div>
+	
+<div class="container col-sm-10 col-md-10 col-xs-11" id="container-table" style="margin-top: 20px; margin-bottom: : 40px;">
+ <fieldset>
+  <legend>Produtos Cadastrados</legend>
+	  <div class="row">
+		<table class="table table-striped table-responsive-md table-responsive-sm" id="tab-produtos" name="tab-produtos" style="margin-left: 10px; margin-right: 10px;">
+		  <thead style="background-color: darkgray">
+			<tr>
+			  <th scope="col" class="tab-ajust radius-top-left">Cod.</th>
+			  <th scope="col" class="tab-ajust" width="30%">Nome</th> 
+			  <th scope="col" class="tab-ajust">Data do Cadastro</th>
+			  <th scope="col" class="tab-ajust">Valor de fabricação </th>
+			  <th scope="col" class="tab-ajust">Porcentagem de Lucro </th>
+			  <th scope="col" class="tab-ajust radius-top-right">Valor do produto </th>
+			</tr>
+		  </thead>
+		  <tbody>
+		  </tbody>
+		  <tfoot style="background-color: darkgray">
+			<tr>
+				<td colspan="6" class="radius-bottom-left radius-bottom-right"></td>
+			</tr>
+		  </tfoot>
+		</table>
+	  </div> 
+  </fieldset>	
+</div> 
+   
+<script src="js/jquery/jquery-3.3.1.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>   
+<script src="js/desafio.js"></script>
+</body>
+</html>

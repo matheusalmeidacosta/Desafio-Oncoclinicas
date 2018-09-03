@@ -1,0 +1,40 @@
+/* CSS Document */
+
+.btn-right{
+	float: right;
+}
+
+.tab-ajust{
+	text-align: center;
+    vertical-align: inherit !important;
+}
+
+.radius-top-left{
+	border-top-left-radius: 20px;
+}
+
+.radius-top-right{
+	border-top-right-radius: 20px;
+}
+
+.radius-bottom-left{
+	border-bottom-left-radius: 20px;
+}
+
+.radius-bottom-right{
+	border-bottom-right-radius: 20px;
+}
+
+.input-erro{
+	color: #495057 !important;
+    background-color: #f8d7da !important;
+    border-color: #efb3b3 !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.2rem rgba(181, 48, 48, 0.25) !important;
+}
+
+
+
+
+
+
